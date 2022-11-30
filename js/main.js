@@ -1,5 +1,6 @@
 const POST_TOPIC_SELECTOR = '%post_topic%';
 const POST_TITLE_SELECTOR = '%post_title%';
+const POST_LINK_SELECTOR = '%post_href%';
 const POST_IMAGE_SELECTOR = '%image_href%';
 const AUTHOR_LINK_SELECTOR = '%author_href%';
 const AUTHOR_NAME_SELECTOR = '%author%';
@@ -28,6 +29,7 @@ getPostCategory = (post) => {
 const insertContentIntoTemplate = (post, template, container) => {
     template.innerHTML = template.innerHTML.replace(POST_TOPIC_SELECTOR, getPostTopic(post));
     template.innerHTML = template.innerHTML.replace(POST_TITLE_SELECTOR, post.title.rendered);
+    template.innerHTML = template.innerHTML.replace(POST_LINK_SELECTOR, post.link);
     template.innerHTML = template.innerHTML.replace(POST_IMAGE_SELECTOR, post.featured_media);
     template.innerHTML = template.innerHTML.replace(AUTHOR_LINK_SELECTOR, post._embedded.author[0].link);
     template.innerHTML = template.innerHTML.replace(AUTHOR_NAME_SELECTOR, post._embedded.author[0].name);
