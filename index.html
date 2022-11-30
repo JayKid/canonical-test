@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cards test</title>
+    <meta name="description" content="A test for canonical's hiring process">
+    <meta name="author" content="Josep López">
+
+    <meta property="og:title" content="Cards test">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A Vanilla framework exercise.">
+
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-3.8.2.min.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="row">
+            <h1>Cards test</h1>
+        </div>
+        <section id="cards" class="row">
+        </section>
+    </main>
+    <template id="card-template">
+        <div class="card p-card--highlighted col-4">
+            <div class="card-highlight-decoration"></div>
+            <header>
+                <h3 class="topic">%post_topic%</h3>
+            </header>
+            <div class="main-content">
+                <img src="%image_href%"  class="card-image"
+                    aria-hidden="true" />
+                <h2 class="title"><a class="title-link"
+                        href="%post_href%" >%post_title%</a></h2>
+                <div class="author-date">By <a class="author-link" href="%author_href%"
+                     rel="author">%author%</a> on
+                    <time class="post-timedate" datetime="%datetime%" title="Originally published %human_date%">%human_date%</time>
+                </div>
+            </div>
+            <footer>
+                %category%
+            </footer>
+        </div>
+    </template>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
